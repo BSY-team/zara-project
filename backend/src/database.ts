@@ -4,12 +4,13 @@ const config = {
   host: 'localhost',
   user: 'root',
   password: '26524649rbk',
-  database: 'your_database_name',
+  database: 'zara',
 };
 
 export const connectDatabase = async (): Promise<Connection> => {
   try {
-    const connection = await mysql.createConnection(config);
+    const pool = mysql.createPool(config);
+    const connection = await pool.getConnection();
     console.log('Connected to the database');
     return connection;
   } catch (error) {
