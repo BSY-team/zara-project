@@ -1,5 +1,5 @@
 {
-  "name": "my-frontend",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,14 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.1.6",
+    "@types/node": "20.1.7",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
-    "eslint": "8.40.0",
-    "eslint-config-next": "13.4.2",
+    "bootstrap": "^5.2.3",
+    "framer-motion": "^10.12.12",
     "next": "13.4.2",
     "react": "18.2.0",
+    "react-bootstrap": "^2.7.4",
     "react-dom": "18.2.0",
+    "react-intersection-observer": "^9.4.3",
+    "react-scrollama": "^2.3.2",
     "typescript": "5.0.4"
   }
 }
