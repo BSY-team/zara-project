@@ -12,9 +12,14 @@
     "@types/node": "20.1.7",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "bootstrap": "^5.2.3",
+    "framer-motion": "^10.12.12",
     "next": "13.4.2",
     "react": "18.2.0",
+    "react-bootstrap": "^2.7.4",
     "react-dom": "18.2.0",
+    "react-intersection-observer": "^9.4.3",
+    "react-scrollama": "^2.3.2",
     "typescript": "5.0.4"
   }
 }
