@@ -1,20 +1,18 @@
-import mysql, { Connection } from 'mysql2/promise';
+import mysql, { Connection } from 'mysql2';
 
-const config = {
+const conn: Connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '26524649rbk',
+  password: 'soumaya',
   database: 'zara',
-};
+});
 
-export const connectDatabase = async (): Promise<Connection> => {
-  try {
-    const pool = mysql.createPool(config);
-    const connection = await pool.getConnection();
-    console.log('Connected to the database');
-    return connection;
-  } catch (error) {
+conn.connect((error) => {
+  if (error) {
     console.error('Error connecting to the database:', error);
-    throw error;
+    return;
   }
-};
+  console.log('Connected to the database!');
+});
+
+module.exports = conn;

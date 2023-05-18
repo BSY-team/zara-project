@@ -1,21 +1,23 @@
 import express, { Request, Response } from 'express';
-import {connectDatabase} from './database';
+const conn=require ('./database')
+const cors = require("cors");
+
 import bodyParser from 'body-parser';
+const router = require("./router/router");
 const app = express();
-const port = 5000;
+const port = 5050;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello, world!');
 });
+app.use("/api", router);
 
-connectDatabase().then(() => {
-  app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-  });
-}).catch((error) => {
-  console.error('Error connecting to the database:', error);
-});
+    app.listen(port, () => {
+      console.log(`Server running on port ${port}`);
+    });
+ 
