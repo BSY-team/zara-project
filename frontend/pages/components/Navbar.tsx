@@ -7,10 +7,10 @@ import Sidebar from './sidebar';
 const NavBar = () => {
   return (
     <div>
-      <Navbar bg="transparent" expand="lg" variant="light" className="navbares">
-        <Sidebar />
+      <Navbar bg="transparent" expand="lg" variant="light" className="navbares" fixed="top">
+        <Sidebar  />
         <Container fluid>
-          <Navbar.Brand href="#">
+          <Navbar.Brand href="/">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/2560px-Zara_Logo.svg.png"
               style={{ marginLeft: "100px", width: "200px", height: "90px" }}
@@ -29,28 +29,46 @@ const NavBar = () => {
                   marginLeft: "50px",
                 }}
               >
-            
+                
               </Nav.Link>
             </Nav>
 
-            <Nav.Link
-              href="/Search"
-              style={{
-                fontFamily: "Sans-serif",
-                fontSize: "15px",
-                marginRight: "60px",
-                textDecoration: "underline",
-              }}
-            >
-              search
-            </Nav.Link>
+            <div>
+              <Nav.Link
+                href="/Search"
+                style={{
+                  fontFamily: "Sans-serif",
+                  fontSize: "20px",
+                  marginRight: "60px",
+                  textDecoration: "underline",
+                }}
+              >
+                Search
+              </Nav.Link>
+            </div>
 
-            <Nav.Link href="#action1" style={{ fontFamily: "Sans-serif", fontSize: "15px" }}>
-              login
-            </Nav.Link>
-            <img
-              src="https://e7.pngegg.com/pngimages/516/93/png-clipart-computer-icons-user-cart-miscellaneous-symbol.png"
-              style={{ marginLeft: "80px", width: "40px", height: "40px" }}
+            <div>
+              <Nav.Link href="/login" style={{ fontFamily: "Sans-serif", fontSize: "20px" }}>
+                Login
+              </Nav.Link>
+            </div>
+
+            <div>
+              <Nav.Link
+                href="/Search"
+                style={{
+                  fontFamily: "Sans-serif",
+                  fontSize: "20px",
+                  marginLeft: "70px",
+                }}
+              >
+               Help
+              </Nav.Link>
+            </div>
+
+            <img 
+              src="https://cdn-icons-png.flaticon.com/512/117/117641.png"
+              style={{ marginLeft: "80px", width: "30px", height: "20px" }}
             />
           </Navbar.Collapse>
         </Container>
