@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link'
 
 export async function getStaticProps() {
-  const products = await fetch ("http://localhost:5000/product/women").then(response => response.json())
+  const products = await fetch ("http://localhost:5000/product/men").then(response => response.json())
   
   return {
       props:{
@@ -11,7 +11,7 @@ export async function getStaticProps() {
       }
   }
 }   
-const women: React.FC = ({products}:any) => {
+const men: React.FC = ({products}:any) => {
   
 
 
@@ -29,9 +29,7 @@ const women: React.FC = ({products}:any) => {
             
           <img style={{ width: '800px' }} src={product.images_product} alt={product.name_product}  />
           <div>
-          <Link href={`OneProduct/${product.idproduct}`}>{product.name_product}</Link>
-           
-          
+          <Link href={`secondproduct/${product.idproduct}`}>{product.name_product}</Link>
             <div>
               
               <p style={{ fontWeight: 'bold' }} >{product.price} DNT</p>
@@ -44,4 +42,4 @@ const women: React.FC = ({products}:any) => {
 };
 
 
-export default women;
+export default men;
