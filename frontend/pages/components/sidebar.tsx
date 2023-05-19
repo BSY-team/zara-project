@@ -51,18 +51,23 @@ const Sidebar: React.FC = () => {
         >
           <ul className="nav flex-column">
             <li className="nav-item">
-              <Nav.Link href="/Womon" style={{ color: 'black', fontFamily: 'Sans-serif', fontSize: '15px', marginLeft: '50px' }}>
-                Woman
+              <Nav.Link href="/collection" style={{ color: 'black', fontFamily: 'Sans-serif', fontSize: '15px', marginLeft: '50px' }}>
+              collection
               </Nav.Link>
             </li>
             <li className="nav-item">
-              <Nav.Link href="/Man" style={{ color: 'black', fontFamily: 'Sans-serif', fontSize: '15px', marginLeft: '50px' }}>
-                Man
+              <Nav.Link href="/women" style={{ color: 'black', fontFamily: 'Sans-serif', fontSize: '15px', marginLeft: '50px' }}>
+               Woman
+              </Nav.Link>
+            </li>
+            <li className="nav-item">
+              <Nav.Link href="/Men" style={{ color: 'black', fontFamily: 'Sans-serif', fontSize: '15px', marginLeft: '50px' }}>
+                Men
               </Nav.Link>
             </li>
             <li className="nav-item">
               <Nav.Link href="/Kids" style={{ color: 'black', fontFamily: 'Sans-serif', fontSize: '15px', marginLeft: '50px' }}>
-                Kids
+                kids
               </Nav.Link>
             </li>
           </ul>
