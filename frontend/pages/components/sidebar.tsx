@@ -66,7 +66,7 @@ const Sidebar: React.FC = () => {
               </Nav.Link>
             </li>
             <li className="nav-item">
-              <Nav.Link href="/Kids" style={{ color: 'black', fontFamily: 'Sans-serif', fontSize: '15px', marginLeft: '50px' }}>
+              <Nav.Link href="/kids" style={{ color: 'black', fontFamily: 'Sans-serif', fontSize: '15px', marginLeft: '50px' }}>
                 kids
               </Nav.Link>
             </li>
