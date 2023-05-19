@@ -7,6 +7,7 @@ const conn: Connection = mysql.createConnection({
   database: 'zara',
 });
 
+
 conn.connect((error) => {
   if (error) {
     console.error('Error connecting to the database:', error);
