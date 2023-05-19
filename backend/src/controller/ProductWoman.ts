@@ -32,6 +32,16 @@ export const getAllmenProducts = (req: Request, res: Response): void => {
     }
   });
 };
+export const getAllkidsProducts= (req: Request, res: Response): void => {
+  const sql: string = `SELECT * FROM product WHERE category = "KIDS"`;
+  conn.query(sql, (error: any, results: any) => {
+    if (error) {
+      res.status(500).send(error);
+    } else {
+      res.status(200).json(results);
+    }
+  });
+};
 
 
 
