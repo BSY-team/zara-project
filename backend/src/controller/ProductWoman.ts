@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
-const conn=require ('../database')
+import {connection} from '../database';
 
 export const getAll = (req: Request, res: Response): void => {
     const sql: string = `SELECT * FROM product`;
-    conn.query(sql, (error: any, results: any) => {
+    connection.query(sql, (error: any, results: any) => {
       if (error) {
         res.status(500).send(error);
       } else {
@@ -14,7 +14,7 @@ export const getAll = (req: Request, res: Response): void => {
 
 export const getAllWomenProducts = (req: Request, res: Response): void => {
   const sql: string = `SELECT * FROM product WHERE category = "FEMME"`;
-  conn.query(sql, (error: any, results: any) => {
+  connection.query(sql, (error: any, results: any) => {
     if (error) {
       res.status(500).send(error);
     } else {
@@ -24,7 +24,7 @@ export const getAllWomenProducts = (req: Request, res: Response): void => {
 };
 export const getAllmenProducts = (req: Request, res: Response): void => {
   const sql: string = `SELECT * FROM product WHERE category = "HOMME"`;
-  conn.query(sql, (error: any, results: any) => {
+  connection.query(sql, (error: any, results: any) => {
     if (error) {
       res.status(500).send(error);
     } else {
@@ -34,7 +34,7 @@ export const getAllmenProducts = (req: Request, res: Response): void => {
 };
 export const getAllkidsProducts= (req: Request, res: Response): void => {
   const sql: string = `SELECT * FROM product WHERE category = "KIDS"`;
-  conn.query(sql, (error: any, results: any) => {
+  connection.query(sql, (error: any, results: any) => {
     if (error) {
       res.status(500).send(error);
     } else {
@@ -48,9 +48,9 @@ export const getAllkidsProducts= (req: Request, res: Response): void => {
 
 export const getOneProductById = (req: Request, res: Response): void => {
   const id: any = req.params.id;
-console.log(id);
+
   const sql: string = `SELECT * FROM product WHERE idproduct="${id}"`;
-  conn.query(sql, (err: any, result: any) => {
+  connection.query(sql, (err: any, result: any) => {
     if (err) {
       res.status(500).send(err);
     } else {
