@@ -40,8 +40,8 @@ const AllProducts: React.FC = () => {
           <MDBCardBody>
             <MDBCardText>{product.name_product}</MDBCardText>
             <div className="flex">
-              <p style={{ textDecoration: 'line-through' }}>₹ {product.original_price}</p>
-              <p> {product.price} DNT</p>
+              <p style={{ textAlign: 'center' }}>{product.price} DNT</p>
+             
             </div>
           </MDBCardBody>
         </MDBCard>
