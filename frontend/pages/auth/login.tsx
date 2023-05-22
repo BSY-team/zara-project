@@ -1,6 +1,17 @@
 "use client"
 import React, { useState } from 'react';
+import Link from 'next/link';
 import {  createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBCard,
+  MDBCardBody,
+  MDBRow,
+  MDBCol,
+  MDBInput,
+}
+from 'mdb-react-ui-kit';
 import {
     auth
 } from "../../firbase/firbase"
@@ -15,7 +26,7 @@ const Login: React.FC = () => {
        signInWithEmailAndPassword(auth,email, password) .then((_) => {
           return axios.get("http://localhost:5000/auth/getUser/"+ email ).then((response) => {
            console.log(response);
-           router.push("/");
+           router.push("/collection");
          });
        
       
@@ -32,11 +43,38 @@ const Login: React.FC = () => {
     }
   }
   return (
-    <div className='a'>
-      <input className='login' placeholder="email" onChange={(e) => setEmail(e.target.value)} />
-      <input className='login' placeholder="password" onChange={(e) => setPassword(e.target.value)} />
-      <button  onClick={handleLogin}>Submit</button>
-    </div>
+    <MDBContainer className="d-flex align-items-center vh-100">
+      <MDBRow className="justify-content-center">
+        <MDBCard>
+          <h1 style={{marginBottom: "2rem"}}>Log in</h1>
+
+
+        <MDBCol md='6'>
+
+          <MDBCardBody id="card-body">
+          
+            <MDBInput wrapperClass='mb-4' label='E-MAIL' id='form1' type="email" onChange={(e) => setEmail(e.target.value)}/>
+            <MDBInput wrapperClass='mb-4' label='PASSWORD' id='form2' type='password' onChange={(e) => setPassword(e.target.value)}/>
+
+            <MDBBtn className="mb-4" color="primary"   onClick={handleLogin}>Log in</MDBBtn>
+           
+
+            <div className="d-flex justify-content-between mb-4">
+              <a href="#">Have you forgotten your password?</a>
+            </div>
+          </MDBCardBody>
+
+        </MDBCol>
+
+        </MDBCard>
+        <MDBCol  className="text-center mt-4">
+          <h3>Need an Account?</h3>
+          <Link href={"/auth/sign-up"}><MDBBtn className="btn btn-outline-primary"> Register </MDBBtn></Link>
+          
+        </MDBCol>
+      </MDBRow>
+
+  </MDBContainer>
   );
 };
 

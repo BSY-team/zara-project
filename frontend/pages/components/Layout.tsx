@@ -6,7 +6,7 @@ import NavBar from './Navbar'
 const Layout = ({children}:any) => {
   return (
     <div >
-      {/* <NavBar/> */}
+      <NavBar/>
       <div>{children}</div>
 
     </div>

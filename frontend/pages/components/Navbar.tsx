@@ -48,7 +48,7 @@ const NavBar = () => {
             </div>
 
             <div>
-              <Nav.Link href="/login" style={{ fontFamily: "Sans-serif", fontSize: "20px" }}>
+              <Nav.Link href="/auth/login" style={{ fontFamily: "Sans-serif", fontSize: "20px" }}>
                 Login
               </Nav.Link>
             </div>

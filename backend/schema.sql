@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS `zara`.`users` (
   `email` VARCHAR(45) NOT NULL,
   `password` VARCHAR(255) NOT NULL,
   `lastName` VARCHAR(95) NOT NULL,
+  `adresses` VARCHAR(95) NOT NULL,
   PRIMARY KEY (`idusers`))
 ENGINE = InnoDB;
 

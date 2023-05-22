@@ -17,6 +17,7 @@
     "@types/react-dom": "18.2.4",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
+    "firebase": "^9.22.0",
     "framer-motion": "^10.12.12",
     "mdb-cli": "^4.3.0",
     "mdb-react-ui-kit": "^6.0.0",

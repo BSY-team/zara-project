@@ -16,7 +16,7 @@ const Sidebar: React.FC = () => {
       <FontAwesomeIcon
         icon={sidebarVisible ? faTimes : faBars}
         style={{ marginLeft: '70px', width: '30px', height: '20px', cursor: 'pointer' }}
-        alt={sidebarVisible ? 'Close Sidebar' : 'Open Sidebar'}
+        // alt={sidebarVisible ? 'Close Sidebar' : 'Open Sidebar'}
         onClick={toggleSidebar}
       />
 
